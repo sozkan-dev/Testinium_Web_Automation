@@ -11,11 +11,6 @@ import java.io.IOException;
 import static driver.DriverFactory.cleanDriver;
 
 public class OrderTest {
-    HomePage homePage;
-    SearchPage searchPage;
-    ProductPage productPage;
-    CartPage cartPage;
-
     public OrderTest() throws IOException {
         super();
     }
