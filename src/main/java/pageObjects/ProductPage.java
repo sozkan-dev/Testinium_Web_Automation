@@ -28,6 +28,7 @@ public class ProductPage extends BasePage {
         super();
     }
 
+    //Add product info (description, price) to a text file
     public void productInfoToTxt() {
         String description = productDescription.getText();
         String price = productPrice.getText();
@@ -46,6 +47,7 @@ public class ProductPage extends BasePage {
     }
 
 
+    //Check whether size options available or not, if available then clicks and selects.
     public void addProductToBasket() {
         for (int i = 1; i <= sizeList.size(); i++) {
             WebElement el = getDriver().findElement(By.cssSelector(String.format(".m-variation__item:nth-of-type(%d)"

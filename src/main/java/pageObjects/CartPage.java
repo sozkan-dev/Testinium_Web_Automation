@@ -22,6 +22,7 @@ public class CartPage extends BasePage {
         super();
     }
 
+    //Takes "price" value from productInfo.txt file and check whether product page price and product in cart price match or not.
     public Boolean isCorrectPrice() throws IOException {
 
         waitFor(productPrice);
