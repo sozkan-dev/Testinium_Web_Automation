@@ -20,7 +20,7 @@ public class ProductPage extends BasePage {
     WebElement addBasket;
     @FindBy(css = ".m-variation__item")
     List<WebElement> sizeList;
-    @FindBy(css = ".o-header__userInfo--item.bwi-cart-o.-cart")
+    @FindBy(css = ".m-notification__button.btn") //Cart Button -> .o-header__userInfo--item.bwi-cart-o.-cart Notification Cart Button -> .m-notification__button.btn
     WebElement cart;
 
 
@@ -55,7 +55,9 @@ public class ProductPage extends BasePage {
                 break;
             }
         }
+
         waitForWebElementAndClick(addBasket);
+        waitFor(cart);
         waitForWebElementAndClick(cart);
     }
 }

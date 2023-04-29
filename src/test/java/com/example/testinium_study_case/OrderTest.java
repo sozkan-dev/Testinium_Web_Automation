@@ -11,6 +11,10 @@ import java.io.IOException;
 import static driver.DriverFactory.cleanDriver;
 
 public class OrderTest {
+    HomePage homePage;
+    SearchPage searchPage;
+    ProductPage productPage;
+    CartPage cartPage;
 
     public OrderTest() throws IOException {
         super();
@@ -25,6 +29,7 @@ public class OrderTest {
     public void tearDown() {
         cleanDriver();
     }
+
 
     @Test
     public void orderTest() throws IOException, InterruptedException {
@@ -43,9 +48,11 @@ public class OrderTest {
         productPage.addProductToBasket();
 
         CartPage cartPage = new CartPage();
+        Thread.sleep(10);
         Assert.assertTrue(cartPage.isCorrectPrice());
         Assert.assertTrue(cartPage.isQuantityMatch(1));
         Assert.assertTrue(cartPage.isDeleted());
 
     }
+
 }

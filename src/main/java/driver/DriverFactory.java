@@ -49,6 +49,7 @@ public class DriverFactory {
                 options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
                 options.addArguments("--remote-allow-origins=*");
                 driver = new ChromeDriver(options);
+                driver.manage().window().maximize();
                 break;
             }
             case "firefox" -> {

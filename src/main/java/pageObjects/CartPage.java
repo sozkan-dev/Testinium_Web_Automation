@@ -4,10 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 public class CartPage extends BasePage {
@@ -26,6 +23,7 @@ public class CartPage extends BasePage {
     }
 
     public Boolean isCorrectPrice() throws IOException {
+
         waitFor(productPrice);
         String price = productPrice.getText()
                                    .trim();
